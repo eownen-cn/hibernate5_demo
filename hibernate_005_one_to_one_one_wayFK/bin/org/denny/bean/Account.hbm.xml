@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="org.denny.bean">
+	<class name="Account" >
+		<id name="countId" column="count_id" type="java.lang.String" >
+			<generator class="uuid" />
+		</id>
+		<property name="countName" column="count_name" />
+		<!-- 
+			many-to-one : 设置单向一对一关联关系
+			unique : 约束一个账户只能有一个地址 
+			column : 设定外键列
+		-->
+		<many-to-one name="address" unique="true" column="dress_id" />
+	</class>
+</hibernate-mapping>

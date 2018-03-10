@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="org.denny.bean">
+	<class name="org.denny.bean.Member" dynamic-update="true">
+		<id name="mid" type="java.lang.Integer">
+			<column name="mid"/>
+			<generator class="increment" />
+		</id>
+		<property name="title"/>
+		<property name="content"/>
+	</class>
+</hibernate-mapping>
